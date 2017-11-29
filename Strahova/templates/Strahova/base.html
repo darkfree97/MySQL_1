@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}{% endblock %}</title>
+    {% load staticfiles %}
+    <link rel="stylesheet" href="{% static 'Strahova/style/style.css' %}">
+    <link rel="shortcut icon" href="{% static 'Strahova/img/inssurence.png' %}" />
+    <link rel="stylesheet" href="{% static 'Strahova/style/jquery-ui.min.css' %}">
+    <script src="{% static 'Strahova/js/jquery-3.1.0.min.js' %}"></script>
+    <script src="{% static 'Strahova/js/jquery-ui.min.js' %}"></script>
+    {% block head %}{% endblock %}
+</head>
+<body>
+<div class="super_content" style="position: absolute;left: 260px">
+<header>
+    <img id="top_header_logo" src="{% static 'Strahova/img/back.png' %}">
+    <nav>
+        <ul class="menu">
+            <li class="first_menu_el"><a href="{% url 'Strahova:news' %}">НОВИНИ</a></li>
+            <li class="second_menu_el"><a href="{% url 'Strahova:services' %}">ПОСЛУГИ</a></li>
+            <li class="third_menu_el"><a href="{% url 'Strahova:departments' %}">ПРЕДСТАВНИЦТВА</a></li>
+            <li class="fourth_menu_el"><a href="{% url 'Strahova:info' %}">ПРО НАС</a></li>
+        </ul>
+    </nav>
+</header>
+{% block body %}
+{% endblock %}
+<footer>
+    <div class="contact_info">© 2017 Insurance</div>
+    <a id="fb_href" class="social" target="_blank" href="https://www.facebook.com"><img class="social" src="{% static 'Strahova/img/gold_fb_logo.png' %}"></a>
+    <a id="tw_href" class="social" target="_blank" href="https://twitter.com"><img class="social" src="{% static 'Strahova/img/gold_tw_logo.png' %}"></a>
+    <a id="gp_href" class="social" target="_blank" href="https://plus.google.com"><img class="social" src="{% static 'Strahova/img/gold-google-plus.png' %}"></a>
+</footer>
+</div>
+</body>
+</html>

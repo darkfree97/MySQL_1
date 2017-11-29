@@ -1,0 +1,69 @@
+.info_img_1{
+    width: 400px;
+    height: 265px;
+    position: relative;
+    left: 150px;
+    top:460px;
+}
+.info_img_2{
+    width: 426px;
+    height: 283px;
+    position: relative;
+    top: 200px;
+    left: 792px;
+}
+.info_img_3{
+    width: 399px;
+    height: 464px;
+    position: relative;
+    top: -40px;
+    left: 150px;
+}
+
+.info_text_1{
+    width: 656px;
+    height: 256px;
+    position: relative;
+    top: 170px;
+    left: 560px;
+    font-family: "Century Schoolbook";
+    font-size: 24px;
+}
+.info_text_2{
+    width: 629.42px;
+    height: 275.26px;
+    font-family: "Century Schoolbook";
+    position: relative;
+    font-size: 24px;
+    top:-50px;
+    left: 149px;
+}
+.info_text_3{
+    width: 654.09px;
+    height: 472px;
+    font-family: "Century Schoolbook";
+    font-size: 24px;
+    position: relative;
+    top: -450px;
+    left: 560px;
+}
+.info_text_4{
+    width: 1065px;
+    height: 277.83px;
+    font-family: "Century Schoolbook";
+    font-size: 24px;
+    position: relative;
+    left: 150px;
+    top: -470px;
+}
+.super_content{
+height: 1828px;
+top:-10px;
+}
+footer{
+    top: 1828px;
+}
+body{
+width: 1366px;
+    height: 1828px;
+}

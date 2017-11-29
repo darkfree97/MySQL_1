@@ -1,0 +1,100 @@
+{% extends 'Strahova/base.html' %}
+
+{% block title %}{{ title }}{% endblock %}
+
+{% block head %}
+    {% load staticfiles %}
+<style>
+ ul{
+    width: 1300px;
+    position: absolute;
+    top: 500px;
+    list-style-type: none;
+}
+ .menu li{
+     top: 366px;
+ }
+
+* {margin: 0; padding: 0;}
+
+.serv {
+  margin: 20px;
+}
+
+.serv ul {
+  list-style-type: none;
+  width: 500px;
+    position: relative;
+    top: 500px;
+}
+
+.serv h3 {
+  font: bold 20px/1.5 Helvetica, Verdana, sans-serif;
+}
+
+.serv li img {
+  float: left;
+  margin: 0 15px 0 0;
+}
+
+.serv li p {
+  font: 200 12px/1.5 Georgia, Times New Roman, serif;
+}
+
+.serv li {
+  padding: 10px;
+  overflow: auto;
+    left: 130px;
+    position: relative;
+    width: 375px;
+}
+
+.serv li:hover {
+  background: #eee;
+  cursor: pointer;
+}
+#answer{
+    background: lightyellow;
+    position: relative;
+    left: 565px;
+    padding: 10px;
+    width: 630px;
+    min-height: 460px;
+}
+</style>
+{% endblock %}
+
+{% block body %}
+<div class="serv">
+  <ul>
+  {% csrf_token %}
+      {% for service in services %}
+          <li value="{{ service.id }}">
+              <img src="{{ service.image.url }}" width="100px" height="100px" />
+              <h3>{{ service.name }}</h3>
+          </li>
+      {% endfor %}
+  </ul>
+</div>
+    <div id="answer">
+    </div>
+<script>
+$('li').click(function (event) {
+    var serv_id = $(this).attr("value");
+    console.log(serv_id);
+$.ajax({
+        type: 'POST',
+        url: '/strahova/service_description/',
+        data: {
+            'service_id': serv_id,
+            'csrfmiddlewaretoken': $("input[name=csrfmiddlewaretoken]").val()
+        },
+        success: servSuccess,
+        dataType: 'html'
+    })
+});
+function servSuccess(data, textStatus, jqXHR) {
+    $("#answer").html(data);
+}
+</script>
+{% endblock %}

@@ -1,0 +1,32 @@
+{% extends 'Strahova/base.html' %}
+
+{% block title %}{{ title }}{% endblock %}
+{% block head %}
+    {% load staticfiles %}
+    <link rel="stylesheet" href="{% static 'Strahova/style/departments_style.css' %}">
+    <link rel="stylesheet" href="{% static 'Strahova/style/bootstrap-theme.min.css' %}">
+{% endblock %}
+{% block body %}
+
+    <div class="ukr_map">
+        <p class="map_title_head">ПРЕДСТАВНИЦЬКА МЕРЕЖА</p>
+        <img class="ukr_map_img" src="{% static 'Strahova/img/Map_of_Ukraine_political_simple_blank.png' %}">
+    </div>
+    <div class="input_fields">
+        <form action="#" method="post">
+            {% csrf_token %}
+            <label class="rg_lbl" for="region">Введіть область</label>
+            <input id="region" name="region" type="text">
+            <label class="ds_lbl" for="district">Введіть район</label>
+            <input id="district" name="district" type="text">
+            <label class="ct_lbl" for="city">Введіть місто</label>
+            <input id="city" name="city" type="text">
+            <input id="starter" type="submit" value="Пошук філіалу">
+        </form>
+    </div>
+    <div class="output_fields"></div>
+    <div id="dialog">
+        <img id="dialog_image" width="300px" height="300px">
+    </div>
+    <script src="{% static 'Strahova/js/control/departments.js' %}"></script>
+{% endblock %}

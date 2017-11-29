@@ -1,0 +1,117 @@
+.map_title_head{
+    font-size: 30px;
+    font-family: "Century Schoolbook";
+    position: relative;
+    top: 448px;
+    left: 480px;
+}
+.ukr_map_img{
+    width: 797px;
+    height: 541px;
+    position: absolute;
+    top: 510px;
+    left: 284px;
+}
+.input_fields form input{
+    width: 370px;
+    height: 55px;
+    padding-right: 20px;
+    padding-left: 20px;
+    border-radius: 23.5px;
+    border: none;
+    font-size: 24px;
+    font-family: "Century Schoolbook";
+
+    background-color: rgb(253, 230, 104);
+    outline: none;
+}
+.input_fields form label{
+    position: absolute;
+    font-size: 24px;
+    font-family: "Century Schoolbook";
+}
+
+.input_fields form input:focus{
+border-radius: 23.5px;
+border: 1px solid rgb(180, 149, 3);
+}
+#region{
+position: absolute;
+left: 150px;
+top: 1120px;
+}
+#region label{
+    top: 1086px;
+}
+.rg_lbl{
+    top: 1086px;
+    left: 260px;
+}
+#district{
+    position: absolute;
+    left: 150px;
+    top: 1215px;
+}
+.ds_lbl{
+    top: 1181px;
+    left: 270px;
+}
+#city{
+    position: absolute;
+    left: 150px;
+    top: 1310px;
+}
+.ct_lbl{
+    top: 1278px;
+    left: 273px;
+}
+#starter{
+    opacity: 1;
+    position: absolute;
+    left: 150px;
+    top: 1405px;
+    width: 410px;
+    background-color: rgb(251, 214, 3);
+}
+.output_fields {
+    width: 611px;
+    height: 340px;
+    position: absolute;
+    top: 1120px;
+    left: 606px;
+    background-color: rgb(253, 230, 104);
+    border-radius: 23.5px;
+    font-family: "Century Schoolbook";
+    overflow-y: auto;
+    scrollbar-base-color: black;
+
+
+}
+.output_fields ul li{
+    position: relative;
+    font-size: 25px;
+    margin: 10px;
+    list-style: none;
+    display: block;
+    overflow-x: auto;
+    top: -77px;
+    left: 70px;
+    width: 520px;
+}
+.output_fields ul a{
+    outline: none;
+}
+footer{
+    top: 1514px;
+}
+body{
+    width: 1366px;
+    height: 1614px;
+}
+#dialog_image:active{
+    outline: none;
+}
+
+.ui-dialog-titlebar{
+    background-color: #fde668;
+}

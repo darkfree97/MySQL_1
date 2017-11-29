@@ -1,0 +1,10 @@
+<ul class="list-group">
+{% load staticfiles %}
+<script src="{% static 'Strahova/js/control/departments.js' %}"></script>
+{% for department in departments %}
+    <div style="position: relative;margin: 10px 10px 10px -40px; height: 70px; width:610px; border-bottom: 1px solid darkorange">
+        <a href="{{ department.photo.url }}"><img src="{% static 'Strahova/img/map.png' %}" width="70px" height="70px"></a>
+        <li>{{ department }}</li>
+    </div>
+{% endfor %}
+</ul>

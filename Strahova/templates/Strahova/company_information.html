@@ -1,0 +1,26 @@
+{% extends 'Strahova/base.html' %}
+{% block title %}{{ title }}{% endblock %}
+{% block head %}
+    {% load staticfiles %}
+    <link rel="stylesheet" href="{% static 'Strahova/style/company_style.css' %}">
+{% endblock %}
+
+{% block body %}
+{% for item in info %}
+    {% if item.id == 1 %}
+        <img class="info_img_1" src="{{ item.image.url }}" alt="Nothing to show">
+        <div class="info_text_1"><p style="text-align: center">ПРО НАС</p><br>{{ item.information }}</div>
+    {% endif %}
+    {% if item.id == 2 %}
+        <img class="info_img_2" src="{{ item.image.url }}" alt="Nothing to show">
+        <div class="info_text_2">{{ item.information }}</div>
+    {% endif %}
+    {% if item.id == 3 %}
+        <img class="info_img_3" src="{{ item.image.url }}" alt="Nothing to show">
+        <div class="info_text_3">{{ item.information }}</div>
+    {% endif %}
+    {% if item.id == 4 %}
+        <div class="info_text_4">{{ item.information }}</div>
+    {% endif %}
+{% endfor %}
+{% endblock %}

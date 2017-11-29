@@ -1,0 +1,99 @@
+#top_header_logo {
+    position: absolute;
+    left: 0px;
+    top:5px;
+    width: 1366px;
+    height: 350px;
+}
+.menu{
+    list-style-type: none;
+    top: -11px;
+    position: relative;
+}
+
+.menu li{
+    border-width: 1px;
+    border-color: rgb(251, 214, 3);
+    border-style: solid;
+    background-color: rgb(251, 214, 3);
+    position: absolute;
+    top: 350px;
+    width: 265px;
+    height: 100px;
+    text-align: center;
+}
+.menu li:hover{
+    background-color: rgb(251, 191, 34);
+}
+.menu li:active{
+    background-color: rgb(251, 169, 14);
+}
+
+.menu li a{
+    font-size: 24px;
+    font-family: "Century Schoolbook";
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    line-height: 1.2;
+    position: relative;
+    text-align: center;
+    top: 34px;
+    z-index: 32;
+}
+
+.first_menu_el {
+    left: 150px;
+}
+
+.second_menu_el {
+    left: 416px;
+}
+
+.third_menu_el {
+    left: 683px;
+}
+
+.fourth_menu_el {
+    left: 949px;
+}
+
+footer {
+    background-image: url("../img/footer.png");
+    opacity: 0.91;
+    position: absolute;
+    left: 0px;
+    top: 2828px;
+    width: 1366px;
+    height: 200px;
+    z-index: 4;
+}
+
+.contact_info{
+    font-size: 30px;
+    font-family: "Century Schoolbook";
+    color: rgb(0, 0, 0);
+    line-height: 1.2;
+    text-align: left;
+    position: relative;
+    left: 150px;
+    top: 90px;
+}
+
+.social{
+    position: relative;
+    width: 50px;
+    height: 50px;
+    top: 25px;
+}
+#fb_href{
+    left: 950px;
+}
+#tw_href{
+    left: 1000px;
+}
+#gp_href{
+    left: 1050px;
+}
+.super_content{
+    top:-10px;
+}

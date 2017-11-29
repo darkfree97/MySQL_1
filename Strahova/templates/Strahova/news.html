@@ -1,0 +1,47 @@
+{% extends 'Strahova/base.html' %}
+
+{% block title %}{{ title }}{% endblock %}
+{% block head %}
+<style>
+.news_cl {
+    position: relative;
+    width: 500px;
+    margin: 10px;
+    left: 150px;
+    top: 530px;
+    font-family: "Roboto", "Lucida Grande", Verdana, Arial, sans-serif;
+    font-size: 24px;
+}
+.news_cl ul{
+    list-style-type: none;
+}
+.news_cl li{
+    background-color: rgb(253, 230, 104);
+    position: relative;
+    left: -60px;
+    width: 1050px;
+    padding: 10px;
+    margin: 10px;
+}
+.news_cl li span{
+    font-size: 20px;
+}
+h1{
+    text-align: center;
+    position: relative;
+    top: 485px;
+    left: 420px;
+}
+</style>
+{% endblock %}
+
+{% block body %}
+    <h1>Новини</h1>
+    <div class="news_cl">
+    <ul>
+    {% for item in news %}
+        <li><span>{{ item.date }}</span><p>{{ item }}</p></li>
+    {% endfor %}
+    </ul>
+    </div>
+{% endblock %}

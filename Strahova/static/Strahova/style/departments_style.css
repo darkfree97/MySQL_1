@@ -29,6 +29,7 @@
     position: absolute;
     font-size: 24px;
     font-family: "Century Schoolbook";
+    width: 200px;
 }
 
 .input_fields form input:focus{

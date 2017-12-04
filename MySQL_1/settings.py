@@ -127,5 +127,4 @@ USE_TZ = True
 STATIC_URL = '/static/'
 
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
-# MEDIA_ROOT = 'C:/Users/Darkfree/PycharmProjects/MySQL_1/media'
 MEDIA_URL = '/media/'
